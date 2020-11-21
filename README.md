@@ -36,7 +36,8 @@ Add Migrations: `dotnet ef migrations add InitialCreate -o Data/Migrations`
 Update database: `dotnet ef database update`
 
 ### Angular Notes
-- Add Cors for API.
+- Add Cors for API (Startup.cs).
+- Add bootstrap: `ng add ngx-bootstrap`
 
 ### Reference
 Build an App with AspNet Core and Angular from Scratch [Course](https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/)
