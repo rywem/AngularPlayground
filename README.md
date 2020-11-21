@@ -21,14 +21,22 @@ Add WebAPI project to solution: `dotnet sln add API`
 - Nuget Gallery
     - Open with ctrl-shift-p (type nuget)
 - SQLite
+- Angular Language Service
+- Angular Snippets (version 9)
+
 ### Nuget Packages
 - Microsoft.EntityFrameworkCore.Sqlite
 - Microsoft.EntityFrameworkCore.Design
+
 ### dotNet Tools
 `dotnet tool install --global dotnet-ef --version 5.0.0` [Source](https://www.nuget.org/packages/dotnet-ef/)
 
 Add Migrations: `dotnet ef migrations add InitialCreate -o Data/Migrations`
 
 Update database: `dotnet ef database update`
+
+### Angular Notes
+- Add Cors for API.
+
 ### Reference
 Build an App with AspNet Core and Angular from Scratch [Course](https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/)
