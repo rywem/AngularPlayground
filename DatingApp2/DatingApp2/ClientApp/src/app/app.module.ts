@@ -16,7 +16,7 @@ import { NavComponent } from './nav/nav.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    NavComponent 
+    NavComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
