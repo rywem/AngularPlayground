@@ -1,6 +1,7 @@
 ﻿using DatingApp2.Data;
 using DatingApp2.Interfaces;
 using DatingApp2.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -17,7 +18,7 @@ namespace DatingApp2.Extensions
             services.AddScoped<ITokenService, TokenService>();
             services.AddDbContext<Data.DataContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
 
             return services;
