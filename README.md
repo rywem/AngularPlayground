@@ -27,7 +27,8 @@ Add WebAPI project to solution: `dotnet sln add API`
 ### Nuget Packages
 - Microsoft.EntityFrameworkCore.Sqlite
 - Microsoft.EntityFrameworkCore.Design
-
+- System.IdentityModel.Tokens.Jwt
+- Microsoft.AspNetCore.Authentication.JwtBearer
 ### dotNet Tools
 `dotnet tool install --global dotnet-ef --version 5.0.0` [Source](https://www.nuget.org/packages/dotnet-ef/)
 
@@ -41,3 +42,4 @@ Update database: `dotnet ef database update`
 
 ### Reference
 Build an App with AspNet Core and Angular from Scratch [Course](https://www.udemy.com/course/build-an-app-with-aspnet-core-and-angular-from-scratch/)
+[Decode A JWT Token](https://jwt.io/)

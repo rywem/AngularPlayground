@@ -1,3 +1,7 @@
+using DatingApp2.Extensions;
+using DatingApp2.Interfaces;
+using DatingApp2.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -6,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace DatingApp2
 {
@@ -21,10 +27,7 @@ namespace DatingApp2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices( IServiceCollection services )
         {
-            services.AddDbContext<Data.DataContext>(options =>
-            {
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
-            });
+            services.AddApplicationServices(Configuration);
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -32,6 +35,7 @@ namespace DatingApp2
                 configuration.RootPath = "ClientApp/dist";
             });
             services.AddCors();
+            services.AddIdentityServices(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,7 +62,8 @@ namespace DatingApp2
             app.UseRouting();
             app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
-                            .WithOrigins("http://localhost:4200")); // must be after UseRouting, before UseAuthorization, and before UseEndpoints.
+                            .WithOrigins("http://localhost:4200")); // must be after UseRouting, before UseAuthentication, before UseAuthorization, and before UseEndpoints.
+            app.UseAuthentication(); // must come before UseAuthorization, after UseCors
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
