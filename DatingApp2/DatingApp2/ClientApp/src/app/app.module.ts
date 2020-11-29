@@ -16,6 +16,9 @@ import { MemberListComponent } from './members/member-list/member-list.component
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
+//import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
+
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { AppRoutingModule } from './app-routing.module';
       { path: 'fetch-data', component: FetchDataComponent },
     ]),*/
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
