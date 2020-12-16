@@ -14,5 +14,6 @@ namespace DatingApp2.Data
         }
 
         public DbSet<AppUser> Users { get; set; }
+
     }
 }
