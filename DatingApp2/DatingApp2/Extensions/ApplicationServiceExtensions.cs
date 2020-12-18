@@ -16,10 +16,14 @@ namespace DatingApp2.Extensions
         public static IServiceCollection AddApplicationServices( this IServiceCollection services, IConfiguration config )
         {
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
             services.AddDbContext<Data.DataContext>(options =>
             {
                 options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
             });
+
+
 
             return services;
         }
