@@ -1,4 +1,6 @@
-﻿using DatingApp2.Data;
+﻿using AutoMapper;
+using DatingApp2.Data;
+using DatingApp2.Helpers;
 using DatingApp2.Interfaces;
 using DatingApp2.Services;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +19,7 @@ namespace DatingApp2.Extensions
         {
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IUserRepository, UserRepository>();
-
+            services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
             services.AddDbContext<Data.DataContext>(options =>
             {
                 options.UseSqlServer(config.GetConnectionString("DefaultConnection"));
