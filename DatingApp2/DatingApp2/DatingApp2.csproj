@@ -38,6 +38,8 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\home\home.component.ts~RF576033c.TMP" />
     <None Remove="ClientApp\src\app\_interceptors\error.interceptor.ts" />
+    <None Remove="ClientApp\src\app\_models\member.ts" />
+    <None Remove="ClientApp\src\app\_models\photo.ts" />
     <None Remove="ClientApp\src\app\_models\user.ts" />
   </ItemGroup>
 
@@ -49,6 +51,8 @@
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\_interceptors\error.interceptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_models\member.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_models\photo.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\_models\user.ts" />
   </ItemGroup>
 
