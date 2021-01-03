@@ -4,10 +4,21 @@ import { environment } from '../../environments/environment';
 import { Member } from '../_models/member';
 
 
+
 const httpOptions = {
   headers: new HttpHeaders({    
-    Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('user'))?.token
+    //Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('user'))?.token
+    Authorization: 'Bearer ' + getBearerToken()
   })
+}
+
+function getBearerToken(): string {
+  var local = localStorage.getItem('user');
+
+  if (local === null)
+    return "";
+  else
+    return JSON.parse(localStorage.getItem('user')).token
 }
 
 @Injectable({
