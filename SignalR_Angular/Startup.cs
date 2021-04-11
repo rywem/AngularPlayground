@@ -42,6 +42,11 @@ namespace SignalR_Angular
                                 .AllowAnyMethod();
                     });
             });
+
+            services.AddSignalR(options =>
+            {
+                options.EnableDetailedErrors = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,11 +63,13 @@ namespace SignalR_Angular
 
             app.UseRouting();
 
+            app.UseCors("AllowAllHeaders");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<MyHub>("/toastr");
             });
         }
     }
