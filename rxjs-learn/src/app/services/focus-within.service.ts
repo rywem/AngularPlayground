@@ -6,10 +6,9 @@ import { debounceTime, distinctUntilChanged, map, mapTo } from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
-export class FocusWithinServiceService extends Observable<boolean>{
+export class FocusWithinService extends Observable<boolean>{
 
   constructor(@Inject(DOCUMENT) documentRef: Document, { nativeElement }: ElementRef<HTMLElement>) {
-    
     const focused$ = merge(
       defer(() => of(nativeElement.contains(documentRef.activeElement))),
       fromEvent(nativeElement, "focusin").pipe(mapTo(true)),
@@ -17,7 +16,7 @@ export class FocusWithinServiceService extends Observable<boolean>{
         map(({ relatedTarget }) => nativeElement.contains(relatedTarget))
       )
     ).pipe(distinctUntilChanged());
-    
+
     super(subscriber => focused$.subscribe(subscriber));
   }
 }
