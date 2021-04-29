@@ -4,19 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
-import { TrackingFocusComponent } from './tracking-focus/tracking-focus.component';
 import { BasicComponent } from './basic/basic.component';
+import { FocusComponent } from './focus/focus.component';
+import { FocusModule } from './focus/focus.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    TrackingFocusComponent,
-    BasicComponent
+    BasicComponent,
+    FocusComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FocusModule
   ],
   providers: [],
   bootstrap: [AppComponent]
