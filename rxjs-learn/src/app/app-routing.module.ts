@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BasicComponent } from './basic/basic.component';
-import { TrackingFocusComponent } from './tracking-focus/tracking-focus.component';
+import { FocusComponent } from './focus/focus.component';
+
 
 const routes: Routes = [
-  { path: 'tracking-focus', component: TrackingFocusComponent },
+  { path: 'focus', component: FocusComponent },
   { path: 'basic', component: BasicComponent }
 ];
 
