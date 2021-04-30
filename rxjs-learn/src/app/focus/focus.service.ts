@@ -6,11 +6,12 @@ import { debounceTime, distinctUntilChanged, map, mapTo } from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
-export class FocusService extends Observable<boolean> {
+export class FocusService extends Observable<Element | null> {
 
   constructor(@Inject(DOCUMENT) documentRef: Document,
   { nativeElement }: ElementRef<HTMLElement>
   ) { 
+    /*
     const focused$ = merge(
       defer(() => of(nativeElement.contains(documentRef.activeElement))),
       fromEvent(nativeElement, "focusin").pipe(mapTo(true)),
@@ -20,7 +21,23 @@ export class FocusService extends Observable<boolean> {
         )
       )
     ).pipe(distinctUntilChanged());
-    
-    super(subscriber => focused$.subscribe(subscriber));
+    */
+
+    const final$ = merge(
+      fromEvent(documentRef, "focusin"),
+      fromEvent(documentRef, "focusout"),
+      of(null)
+    ).pipe(
+      debounceTime(0),
+      map(() =>
+        nativeElement.contains(documentRef.activeElement)
+          ? documentRef.activeElement
+          : null
+      ),
+      distinctUntilChanged()
+    );
+    // Beware of NgZone!
+
+    super(subscriber => final$.subscribe(subscriber));
   }
 }
