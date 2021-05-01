@@ -1,0 +1,64 @@
+@keyframes example {
+    from { background-color: red; }
+    to { background-color: yellow; }    
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+@keyframes example2 {
+    0%  { background-color: red; }
+    25% { background-color: yellow; }
+    50% { background-color: blue; }
+    100% { background-color: green; }
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example2;
+    animation-duration: 4s;
+}
+
+@keyframes example3 { 
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:50px; top:0px;}
+    50%  {background-color:blue; left:50px; top:50px;}
+    75%  {background-color:green; left:0px; top:50px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+.box3  {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example3;
+    animation-duration: 4s;
+}
+
+.box4 { 
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example2;
+    animation-duration: 4s;
+    animation-delay: 4s;
+}
+
+.box5 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example2;
+    animation-duration: 4s;
+    animation-delay: -2s;
+}

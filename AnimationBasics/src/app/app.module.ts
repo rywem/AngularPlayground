@@ -8,6 +8,8 @@ import { SlideUpComponent } from './components/slide-up/slide-up.component';
 import { CardComponent } from './components/slide-up/card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimpleTransitionComponent } from './components/simple-transition/simple-transition.component';
+import { BasicAnimationsComponent } from './components/basic-animations/basic-animations.component';
+import { TransformComponent } from './components/transform/transform.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SimpleTransitionComponent } from './components/simple-transition/simple
     NavComponent,
     SlideUpComponent,
     CardComponent,
-    SimpleTransitionComponent
+    SimpleTransitionComponent,
+    BasicAnimationsComponent,
+    TransformComponent
   ],
   imports: [
     BrowserModule,

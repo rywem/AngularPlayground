@@ -1,0 +1,25 @@
+.box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: lightblue;
+    border-radius: 3px;      
+}
+
+.t1 {
+    transform: translate(10px, 30px);
+}
+
+.t2 {
+    transform: rotate(20deg);
+}
+
+@keyframe rotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(30deg); }
+}
+
+.t3 {
+    animation-name: rotate;
+    animation-duration: 2s;
+}
