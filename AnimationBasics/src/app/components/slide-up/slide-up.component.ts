@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SlideUpCard } from 'src/app/models/SlideUpCard.model';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-slide-up',
