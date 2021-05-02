@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SimpleTransitionComponent } from './simple-transition.component';
+import { OpenCloseComponent } from './open-close.component';
 
-describe('SimpleTransitionComponent', () => {
-  let component: SimpleTransitionComponent;
-  let fixture: ComponentFixture<SimpleTransitionComponent>;
+describe('OpenCloseComponent', () => {
+  let component: OpenCloseComponent;
+  let fixture: ComponentFixture<OpenCloseComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SimpleTransitionComponent ]
+      declarations: [ OpenCloseComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SimpleTransitionComponent);
+    fixture = TestBed.createComponent(OpenCloseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
