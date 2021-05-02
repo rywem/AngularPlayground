@@ -24,8 +24,10 @@ export class SlideUpComponent implements OnInit {
       { name: "Chow Mein", quantity: 1},
       { name: "Paper Clips", quantity: 15},
       { name: "News Papers", quantity: 2},
-      { name: "Plastic Cups", quantity: 3}
+      { name: "Plastic Cups", quantity: 3},
+      { name: "Cheese", quantity: 2},
+      { name: "Fans", quantity: 1},
+      { name: "Towels", quantity: 4},
     ]
   }
-
 }

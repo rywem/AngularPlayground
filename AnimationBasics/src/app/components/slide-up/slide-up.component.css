@@ -6,6 +6,7 @@
     float: left;
     width: 20%;
     padding: 0 10px;
+    
   }
   
   /* Remove extra left and right margins, due to padding in columns */
@@ -14,8 +15,8 @@
 }
   
   /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
