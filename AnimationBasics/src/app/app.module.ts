@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimpleTransitionComponent } from './components/simple-transition/simple-transition.component';
 import { BasicAnimationsComponent } from './components/basic-animations/basic-animations.component';
 import { TransformComponent } from './components/transform/transform.component';
+import { CssTransitionComponent } from './components/css-transition/css-transition.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TransformComponent } from './components/transform/transform.component';
     CardComponent,
     SimpleTransitionComponent,
     BasicAnimationsComponent,
-    TransformComponent
+    TransformComponent,
+    CssTransitionComponent
   ],
   imports: [
     BrowserModule,

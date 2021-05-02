@@ -1,0 +1,81 @@
+div {
+    width: 100px;
+    height: 100px;
+    background: red;    
+}
+
+.t1 {
+    transition: width 2s;
+}
+
+.t1:hover {
+    width: 300px;
+}
+
+.t2 {
+    transition: width 2s, height 4s, background-color 2s;
+}
+
+.t2:hover {
+    width: 300px;
+    height: 200px;
+    background-color: blue;
+}
+
+.t3 { 
+    transition-timing-function: linear;
+    transition: width 4s;
+}
+.t3:hover {
+    width: 300px;
+}
+.t4 { 
+    transition-timing-function: ease;
+    transition: width 4s;
+}
+.t4:hover {
+    width: 300px;
+}
+
+.t5 { 
+    transition-timing-function: ease-in;
+    transition: width 4s;
+}
+.t5:hover {
+    width: 300px;
+}
+
+.t6 { 
+    transition-timing-function: ease-out;
+    transition: width 4s;
+}
+.t6:hover {
+    width: 300px;
+}
+
+.t7 { 
+    transition-timing-function: ease-in-out;
+    transition: width 4s;
+}
+.t7:hover {
+    width: 300px;
+}
+
+.t8 { 
+    transition-timing-function: ease-in-out;
+    transition: width 4s;
+    transition-delay: 1s;
+}
+.t8:hover {
+    width: 300px;
+}
+
+.t9 { 
+    transition-timing-function: ease-in-out;
+    transition: width 2s, height 2s, transform 2s;
+    transition-delay: 1s;
+}
+.t9:hover {
+    width: 300px;
+    height: 200px;
+}

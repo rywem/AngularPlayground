@@ -14,12 +14,7 @@
     transform: rotate(20deg);
 }
 
-@keyframe rotate {
-    from { transform: rotate(0); }
-    to { transform: rotate(30deg); }
-}
-
 .t3 {
-    animation-name: rotate;
-    animation-duration: 2s;
+    margin-left: 50px;
+    transform: scale(2, 3);
 }
