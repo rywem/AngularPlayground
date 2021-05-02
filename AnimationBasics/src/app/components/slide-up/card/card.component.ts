@@ -14,18 +14,18 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
       state('load', style({
         transform: 'translateY(0)'
       })),
-      transition('none => load', animate('1s'))
+      transition('none => load', animate('0.5s'))
     ])
   ]
 })
 export class CardComponent implements AfterViewInit {
   state:string='none';
   @Input() item: SlideUpCard;
-
+  @Input() timing: number = 0;
   constructor() { }
   ngAfterViewInit(): void {
     setTimeout(()=> {
       this.state='load';
-    }, 0);    
+    }, this.timing*50);    
   }
 }
