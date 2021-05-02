@@ -71,11 +71,20 @@ div {
 }
 
 .t9 { 
-    transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;    
     transition: width 2s, height 2s, transform 2s;
     transition-delay: 1s;
 }
 .t9:hover {
     width: 300px;
     height: 200px;
+    transform: scaleX(0.5);
+}
+
+.t10 { 
+    transition-timing-function: ease-in;    
+    transition: transform 2s;    
+}
+.t10:hover {
+    transform: rotate(50deg);
 }
