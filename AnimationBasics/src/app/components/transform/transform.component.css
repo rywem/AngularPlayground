@@ -14,7 +14,6 @@
     transform: rotate(20deg);
 }
 
-.t3 {
-    margin-left: 50px;
-    transform: scale(2, 3);
+.t3 {    
+    transform: scale(0.5, 0.5);
 }
