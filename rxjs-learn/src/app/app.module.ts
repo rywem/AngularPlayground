@@ -7,13 +7,15 @@ import { NavComponent } from './nav/nav.component';
 import { BasicComponent } from './basic/basic.component';
 import { FocusComponent } from './focus/focus.component';
 import { FocusModule } from './focus/focus.module';
+import { VisibilityComponent } from './visibility/visibility.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     BasicComponent,
-    FocusComponent
+    FocusComponent,
+    VisibilityComponent
   ],
   imports: [
     BrowserModule,
